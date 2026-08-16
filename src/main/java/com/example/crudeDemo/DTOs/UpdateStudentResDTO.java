@@ -1,45 +1,16 @@
-package com.example.crudeDemo.entity;
+package com.example.crudeDemo.DTOs;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Entity
-public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UpdateStudentResDTO {
     private long id;
-
-
     private int roll_no;
     private String name;
     private int age;
     private String subject;
     private String email;
-    private boolean deleted;
-    private LocalDateTime createdAt;
+    private String meassge;
     private LocalDateTime updatedAt;
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 
     public long getId() {
         return id;
@@ -89,9 +60,19 @@ public class Student {
         this.email = email;
     }
 
-    public boolean getDeleted() { return deleted; }
+    public String getMeassge() {
+        return meassge;
+    }
 
-    public void setDeleted(boolean deleted) {
-        this.deleted = deleted;
+    public void setMeassge(String meassge) {
+        this.meassge = meassge;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
